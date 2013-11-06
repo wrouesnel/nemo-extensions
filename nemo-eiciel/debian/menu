@@ -1,0 +1,7 @@
+?package(eiciel):\
+  needs="X11"\
+  section="Applications/File Management"\
+  title="Eiciel"\
+  longtitle="POSIX ACL editor"\
+  icon="/usr/share/pixmaps/eiciel.xpm"\
+  command="/usr/bin/eiciel"

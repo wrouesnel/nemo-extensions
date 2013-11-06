@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-gnome-version=3
+
+override_dh_makeshlibs:
+	dh_makeshlibs -Xlibeiciel-nautilus
+
+override_dh_install:
+	dh_install
+	rm -f debian/eiciel/usr/lib/nautilus/extensions-*/*.a
+	rm -f debian/eiciel/usr/lib/nautilus/extensions-*/*.la

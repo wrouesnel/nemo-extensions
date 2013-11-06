@@ -1,0 +1,29 @@
+Source: eiciel
+Section: gnome
+Priority: optional
+Maintainer: Michael Biebl <biebl@debian.org>
+Build-Depends: debhelper (>= 8),
+ automake,
+ autoconf,
+ libtool,
+ autopoint,
+ libacl1-dev,
+ libattr1-dev,
+ libgtkmm-3.0-dev (>= 3.0.0),
+ libnautilus-extension-dev (>= 3.0.0),
+ pkg-config,
+ dh-autoreconf
+Standards-Version: 3.9.2
+Vcs-Git: git://git.debian.org/git/users/biebl/eiciel.git
+Vcs-Browser: http://git.debian.org/?p=users/biebl/eiciel.git;a=summary
+Homepage: http://rofi.pinchito.com/eiciel/
+
+Package: eiciel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: nautilus, yelp
+Enhances: nautilus
+Description: graphical editor for POSIX ACLs and extended user attributes
+ A graphical tool to manipulate POSIX ACLs and extended user attributes for
+ the GNOME environment. It integrates nicely into the Nautilus file manager
+ but also features a standalone application.
